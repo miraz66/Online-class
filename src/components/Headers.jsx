@@ -42,6 +42,9 @@ export default function Headers() {
               </Link>
             ))}
           </div>
+          <button className="text-lg font-semibold rounded-lg text-white bg-secondary hover:bg-muted px-6 py-2 ease-in-out duration-300">
+            Book Class
+          </button>
         </div>
       </div>
     </>
