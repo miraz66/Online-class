@@ -62,6 +62,8 @@ export default function Course() {
         <div className="col-span-3 bg-green-300"></div>
         <div className="col-span-3 bg-green-300"></div>
         <div className="col-span-3 bg-green-300"></div>
+        <div className="col-span-3 bg-green-300"></div>
+        <div className="col-span-3 bg-green-300"></div>
       </div>
     </>
   );
