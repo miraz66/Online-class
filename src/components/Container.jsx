@@ -29,14 +29,12 @@ export default function Container() {
               </span>
             </p>
 
-            <button className="px-6 tracking-tighter mt-10 bg-neutral-100 hover:bg-white ease-in-out duration-200 py-2 rounded-md bg-nu text-black text-lg">
-              Book Your Class Book Your Class Book Your Class
+            <button className="px-8 tracking-tighter mt-10 bg-neutral-100 hover:bg-white ease-in-out duration-200 py-3 rounded-md bg-nu text-black text-lg">
+              Book Your Class
             </button>
           </div>
         </div>
       </div>
-
-      <div className="h-96 w-96 bg-red-200"></div>
     </>
   );
 }
