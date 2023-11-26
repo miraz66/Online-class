@@ -124,6 +124,8 @@ export default function Course() {
             <CourseType />
           </div>
           <div className="border h-10"></div>
+          <div className="border h-10"></div>
+          <div className="border h-10"></div>
         </div>
       </div>
     </>
