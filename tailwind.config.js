@@ -32,6 +32,7 @@ module.exports = {
       },
       textColor: {
         primary: withOpacity("--text-primary-color"),
+        current: withOpacity("--text-current-color"),
         secondary: withOpacity("--text-secondary-color"),
         muted: withOpacity("--text-muted-color"),
       },

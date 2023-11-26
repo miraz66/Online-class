@@ -26,7 +26,7 @@ export default function LearningSection() {
                 world, equipped with the knowledge and real-world skills that
                 take them way ahead in the industry they may serve.
               </p>
-              <button className="mt-14 px-5 py-2 shadow-lg ease-in duration-100 hover:shadow-sm hover:border-[1px]">
+              <button className="mt-14 px-5 py-2 shadow-lg ease-in border-[1px] border-white duration-100 hover:shadow-sm hover:border-[1px]">
                 Know More About Us
               </button>
             </div>
