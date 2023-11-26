@@ -126,6 +126,8 @@ export default function Course() {
           <div className="border h-10"></div>
           <div className="border h-10"></div>
           <div className="border h-10"></div>
+          <div className="border h-10"></div>
+          <div className="border h-10"></div>
         </div>
       </div>
     </>
