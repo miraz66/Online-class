@@ -8,6 +8,8 @@ export default function ExtraClassModel() {
             <input type="checkbox" id="1" />
             <div className="">
               <label htmlFor="1">hello</label>
+              <label htmlFor="1">hello</label>
+              <label htmlFor="1">hello</label>
               <p>h</p>
             </div>
           </div>
