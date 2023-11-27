@@ -38,6 +38,8 @@ export default function ExtraClassModel() {
               <label htmlFor="1">hello</label>
               <label htmlFor="1">hello</label>
               <label htmlFor="1">hello</label>
+              <label htmlFor="1">hello</label>
+              <label htmlFor="1">hello</label>
               <p>h</p>
             </div>
           </div>
