@@ -152,3 +152,33 @@ export const SubHeroIcon = ({ className, fill }) => (
     ></path>
   </svg>
 );
+
+export const ArrowLongRight = ({ className, fill }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className={clsx("w-6 h-6", className)}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+    />
+  </svg>
+);
+
+export const ExclamationMark = ({ className, fill }) => (
+  <svg
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+  >
+    <path
+      fill={fill}
+      d="M12 7c.55 0 1 .45 1 1v4c0 .55-.45 1-1 1s-1-.45-1-1V8c0-.55.45-1 1-1zm-.01-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm1-3h-2v-2h2v2z"
+    ></path>
+  </svg>
+);

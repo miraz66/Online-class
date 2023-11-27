@@ -11,11 +11,15 @@ export default function SubjectCard({
   id,
   check,
   setCheck,
+  setIsOpen,
 }) {
   return (
     <>
       <div
-        onClick={() => setCheck(id)}
+        onClick={() => {
+          setCheck(id);
+          setIsOpen(true);
+        }}
         className={clsx(
           "flex cursor-pointer p-4 gap-4 rounded-lg shadow-md hover:border-lime-400 hover:shadow-xl ease-in-out duration-300",
           id === check

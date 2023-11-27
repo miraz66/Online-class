@@ -7,14 +7,15 @@ import { Data } from "@/assets/SubData";
 export default function CourseType() {
   const [mark, setMark] = useState("all");
   const [check, setCheck] = useState();
+  const [isOpen, setIsOpen] = useState(false);
 
-  console.log(check);
+  console.log(isOpen);
 
   const course = ["all", "sat", "mcat", "lsat", "gmat", "gre", "ielts"];
 
   return (
     <>
-      <div className="h-[46rem]">
+      <div className="h-[46rem] relative">
         <div>
           <h6 className="text-neutral-900 font-semibold text-xl relative after:absolute after:bg-secondary after:h-[2px] after:w-32 after:-bottom-[6px] after:left-0">
             <span>Course Type</span>
@@ -48,6 +49,7 @@ export default function CourseType() {
                   <SubjectCard
                     check={check}
                     setCheck={setCheck}
+                    setIsOpen={setIsOpen}
                     key={index}
                     id={index}
                     {...item}
@@ -58,6 +60,7 @@ export default function CourseType() {
                   <SubjectCard
                     check={check}
                     setCheck={setCheck}
+                    setIsOpen={setIsOpen}
                     id={index}
                     key={index}
                     {...item}

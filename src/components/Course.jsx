@@ -7,13 +7,17 @@ import {
   CardIcon,
   TeachersIcon,
   SummaryIcon,
+  ArrowLongRight,
+  ExclamationMark,
 } from "@/assets/Svg";
 import clsx from "clsx";
 import { useState } from "react";
 import CourseType from "./CourseType";
+import ExtraClassModel from "./ExtraClassModel";
 
 export default function Course() {
   const [active, setActive] = useState("Subjects");
+  const [next, setNext] = useState(false);
 
   const OptionCategory = [
     {
@@ -90,6 +94,17 @@ export default function Course() {
     },
   ];
 
+  // Function to handle button click
+  const handleButtonClick = () => {
+    setNext(true);
+
+    setTimeout(() => {
+      setNext(false);
+    }, 5000);
+
+    return clearTimeout(handleButtonClick);
+  };
+
   return (
     <>
       <div className="max-w-7xl mx-auto px-10 my-10 grid grid-cols-4">
@@ -119,11 +134,27 @@ export default function Course() {
             ))}
           </div>
         </div>
-        <div className="col-span-3 border-2 rounded-lg">
+        <div className=" relative col-span-3 border-2 rounded-lg">
+          {next && (
+            <div className="mx-5 my-3 px-5 flex gap-2 py-2 relative font-medium text-red-500 shadow-xl bg-neutral-100 before:absolute before:h-full before:top-0 before:left-0 before:w-1 before:bg-red-500">
+              <ExclamationMark className="w-5 h-5" fill="#ef4444" />
+              <span>Please select any service to book the appointment.</span>
+            </div>
+          )}
           <div className="p-6 shadow-sm overflow-y-scroll">
             <CourseType />
           </div>
-          <div className="border h-10"></div>
+          <div className="border p-5 pr-10 flex justify-end">
+            <button
+              onClick={handleButtonClick}
+              className="px-6 flex items-center gap-2 py-2 bg-secondary hover:bg-muted ease-in-out duration-200 text-white text-xl tracking-tight rounded-md"
+            >
+              <span>Next Teachers </span>
+              <ArrowLongRight className="h-[40px] w-[40px]" />
+            </button>
+          </div>
+
+          <ExtraClassModel />
         </div>
       </div>
     </>
