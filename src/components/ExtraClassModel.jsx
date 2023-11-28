@@ -39,6 +39,7 @@ export default function ExtraClassModel() {
         <div className=""></div>
         <div className=""></div>
         <div className=""></div>
+        <div className=""></div>
       </div>
     </>
   );
