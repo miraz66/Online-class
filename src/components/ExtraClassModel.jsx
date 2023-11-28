@@ -29,6 +29,7 @@ export default function ExtraClassModel() {
               <p className="pl-8">hello</p>
             </div>
           </div>
+          </div>
         </div>
         <div className=""></div>
         <div className=""></div>
