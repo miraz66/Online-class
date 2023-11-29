@@ -98,6 +98,8 @@ export default function ExtraClassModel() {
           <div className="flex justify-between">
             <h5 className="text-xl font-semibold">Bring anyone with you ?</h5>
             <h5 className="text-xl font-semibold">Bring anyone with you ?</h5>
+            <h5 className="text-xl font-semibold">Bring anyone with you ?</h5>
+            <h5 className="text-xl font-semibold">Bring anyone with you ?</h5>
             <div className="w-96">
               <ListBox />
             </div>
