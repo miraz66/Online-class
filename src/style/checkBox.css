@@ -16,7 +16,7 @@
   width: 0;
 }
 .checkbox.style-c input:checked ~ .checkbox__checkmark {
-  background-color: #f7cb15;
+  background-color: #84cc16;
 
   border: none;
 }
@@ -27,7 +27,7 @@
   background-color: #eee;
 }
 .checkbox.style-c:hover input:checked ~ .checkbox__checkmark {
-  background-color: #f7cb15;
+  background-color: #84cc16;
 }
 .checkbox.style-c .checkbox__checkmark {
   position: absolute;
@@ -47,14 +47,32 @@
   top: 4px;
   width: 5px;
   height: 10px;
-  border: solid #333;
+  border: solid #fcfcfc;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
   opacity: 0;
   transition: opacity 0.25s ease;
 }
-.checkbox.style-c .checkbox__body {
-  color: #333;
-  line-height: 1.4;
-  font-size: 16px;
+
+/* Let's get this party started */
+.side-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+.side-scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Handle */
+.side-scroll::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(243, 243, 243, 0.8);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+.side-scroll::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(230, 227, 227, 0.719);
 }
