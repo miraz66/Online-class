@@ -18,6 +18,7 @@ import ExtraClassModel from "./ExtraClassModel";
 export default function Course() {
   const [active, setActive] = useState("Subjects");
   const [next, setNext] = useState(false);
+  const [isOpen, setIsOpen] = useState();
 
   const OptionCategory = [
     {
@@ -134,7 +135,7 @@ export default function Course() {
             ))}
           </div>
         </div>
-        <div className=" relative col-span-3 border-2 rounded-lg">
+        <div className="h-[55rem] overflow-hidden col-span-3 border-2 rounded-lg">
           {next && (
             <div className="mx-5 my-3 px-5 flex gap-2 py-2 relative font-medium text-red-500 shadow-xl bg-neutral-100 before:absolute before:h-full before:top-0 before:left-0 before:w-1 before:bg-red-500">
               <ExclamationMark className="w-5 h-5" fill="#ef4444" />
@@ -142,9 +143,9 @@ export default function Course() {
             </div>
           )}
           <div className="p-6 shadow-sm overflow-y-scroll">
-            <CourseType />
+            <CourseType setIsOpen={setIsOpen} />
           </div>
-          <div className="border p-5 pr-10 flex justify-end">
+          <div className="border-t p-5 pr-10 flex justify-end">
             <button
               onClick={handleButtonClick}
               className="px-6 flex items-center gap-2 py-2 bg-secondary hover:bg-muted ease-in-out duration-200 text-white text-xl tracking-tight rounded-md"
@@ -153,9 +154,9 @@ export default function Course() {
               <ArrowLongRight className="h-[40px] w-[40px]" />
             </button>
           </div>
-
-          <ExtraClassModel />
         </div>
+
+        {isOpen && <ExtraClassModel isOpen={isOpen} setIsOpen={setIsOpen} />}
       </div>
     </>
   );
