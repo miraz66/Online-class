@@ -13,7 +13,7 @@ import {
 import clsx from "clsx";
 import { useState } from "react";
 import CourseType from "./CourseType";
-import ExtraClassModel from "./ExtraClassModel";
+import ExtraClassModel from "./ExtraSubModel";
 
 export default function Course() {
   const [active, setActive] = useState("Subjects");
@@ -154,9 +154,15 @@ export default function Course() {
               <ArrowLongRight className="h-[40px] w-[40px]" />
             </button>
           </div>
+          <div
+            className={clsx(
+              "ease-in-out duration-300",
+              isOpen ? "-translate-y-[29.6rem]" : "translate-y-0"
+            )}
+          >
+            <ExtraClassModel isOpen={isOpen} setIsOpen={setIsOpen} />
+          </div>
         </div>
-
-        {isOpen && <ExtraClassModel isOpen={isOpen} setIsOpen={setIsOpen} />}
       </div>
     </>
   );

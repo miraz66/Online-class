@@ -29,8 +29,10 @@ const NumberStepper = () => {
     <div className="border h-12 border-neutral-300 rounded-md flex justify-center p-[4px]">
       <button
         className={clsx(
-          "bg-neutral-400 text-white px-3 rounded-l ease-in-out duration-300",
-          value > 1 ? "cursor-pointer" : "cursor-no-drop bg-neutral-200"
+          "text-white px-3 rounded-l ease-in-out duration-300",
+          value > 1
+            ? "cursor-pointer bg-neutral-400"
+            : "cursor-no-drop bg-neutral-200"
         )}
         onClick={decrement}
       >
@@ -50,8 +52,10 @@ const NumberStepper = () => {
       />
       <button
         className={clsx(
-          "bg-neutral-400 text-white px-3 rounded-r ease-in-out duration-300",
-          value < 10 ? "cursor-pointer" : "cursor-no-drop bg-neutral-200"
+          "text-white px-3 rounded-r ease-in-out duration-300",
+          value < 10
+            ? "cursor-pointer bg-neutral-400"
+            : "cursor-no-drop bg-neutral-200"
         )}
         onClick={increment}
       >

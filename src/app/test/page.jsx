@@ -27,7 +27,7 @@ const App = () => {
           Open Modal
         </button>
       </div>
-      <NumberSte />
+      <Modal isOpen={isModalOpen} onClose={closeModal} />
     </>
   );
 };

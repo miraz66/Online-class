@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "@/style/checkBox.css";
 import NumberStepper from "./NumberStepper";
 import { ClockIcon, CurrencyDollarIcon } from "@heroicons/react/24/outline";
-import ListBox from "./ListBox";
+import { Select, Option } from "@material-tailwind/react";
 import clsx from "clsx";
 
 export default function ExtraClassModel({ setIsOpen, isOpen }) {
@@ -28,10 +28,10 @@ export default function ExtraClassModel({ setIsOpen, isOpen }) {
             <div className="px-5 pr-10 py-2 flex justify-between">
               <div className="flex flex-col">
                 <div className="flex gap-3">
-                  <label class="checkbox style-c">
+                  <label className="checkbox style-c">
                     <input type="checkbox" />
-                    <div class="checkbox__checkmark"></div>
-                    <div class="font-semibold text-lg tracking-tight -mt-[2px]">
+                    <div className="checkbox__checkmark"></div>
+                    <div className="font-medium text-lg tracking-tighter -mt-[2px]">
                       Style C
                     </div>
                   </label>
@@ -52,10 +52,10 @@ export default function ExtraClassModel({ setIsOpen, isOpen }) {
             <div className="px-5 pr-10 py-2 flex justify-between">
               <div className="flex flex-col">
                 <div className="flex gap-3">
-                  <label class="checkbox style-c">
+                  <label className="checkbox style-c">
                     <input type="checkbox" />
-                    <div class="checkbox__checkmark"></div>
-                    <div class="font-semibold text-lg tracking-tight -mt-[2px]">
+                    <div className="checkbox__checkmark"></div>
+                    <div className="font-semibold text-lg tracking-tight -mt-[2px]">
                       Style C
                     </div>
                   </label>
@@ -76,10 +76,10 @@ export default function ExtraClassModel({ setIsOpen, isOpen }) {
             <div className="px-5 pr-10 py-2 flex justify-between">
               <div className="flex flex-col">
                 <div className="flex gap-3">
-                  <label class="checkbox style-c">
+                  <label className="checkbox style-c">
                     <input type="checkbox" />
-                    <div class="checkbox__checkmark"></div>
-                    <div class="font-semibold text-lg tracking-tight -mt-[2px]">
+                    <div className="checkbox__checkmark"></div>
+                    <div className="font-semibold text-lg tracking-tight -mt-[2px]">
                       Style C
                     </div>
                   </label>
@@ -100,10 +100,10 @@ export default function ExtraClassModel({ setIsOpen, isOpen }) {
             <div className="px-5 pr-10 py-2 flex justify-between">
               <div className="flex flex-col">
                 <div className="flex gap-3">
-                  <label class="checkbox style-c">
+                  <label className="checkbox style-c">
                     <input type="checkbox" />
-                    <div class="checkbox__checkmark"></div>
-                    <div class="font-semibold text-lg tracking-tight -mt-[2px]">
+                    <div className="checkbox__checkmark"></div>
+                    <div className="font-semibold text-lg tracking-tight -mt-[2px]">
                       Style C
                     </div>
                   </label>
@@ -126,7 +126,15 @@ export default function ExtraClassModel({ setIsOpen, isOpen }) {
           <div className="flex justify-between pt-5">
             <h5 className="text-xl font-semibold">Bring anyone with you ?</h5>
             <div className="w-[22.5rem] relative pr-10">
-              <ListBox />
+              <select className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-none focus:border-neutral-300 sm:text-sm transition-opacity duration-500 ease-in-out">
+                <option className="" value="option1">
+                  Option 1
+                </option>
+                <option value="option2">Option 2</option>
+                <option value="option2">Option 2</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
             </div>
           </div>
         </div>

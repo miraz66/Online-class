@@ -19,7 +19,7 @@ export default function Headers() {
 
   return (
     <>
-      <div className="py-10 max-w-7xl mx-auto flex justify-between relative place-items-center before:absolute before:h-[500px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-3xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[600px] after:translate-x-1/3 after:bg-gradient-conic after:from-lime-100 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-100 before:dark:opacity-10 after:dark:from-sky-200 after:dark:via-[#d0ff01] after:dark:opacity-40 before:lg:h-[360px]">
+      <div className="py-10 max-w-7xl mx-auto flex justify-between relative place-items-center before:absolute before:h-[500px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-3xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[600px] after:translate-x-1/3 after:bg-gradient-conic after:from-lime-100 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-orange-400 before:dark:opacity-10 after:dark:from-sky-200 after:dark:via-[#d0ff01] after:dark:opacity-40 before:lg:h-[360px]">
         <div className="flex items-center z-10">
           <Image src={logo} alt="Logo" height={50} width={50} />
           <span className="text-3xl font-semibold text-secondary">
