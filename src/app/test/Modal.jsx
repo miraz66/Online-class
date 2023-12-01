@@ -17,6 +17,8 @@ const Modal = ({ isOpen, onClose }) => {
     >
       <div className="bg-white p-8 max-w-md rounded shadow-md">
         <p>This is the modal content.</p>
+        <p>This is the modal content.</p>
+        <p>This is the modal content.</p>
         <button
           className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline-blue"
           onClick={onClose}
