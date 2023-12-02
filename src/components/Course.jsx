@@ -183,6 +183,8 @@ export default function Course() {
                 {active === "Teachers" && <span>Next Date & Time</span>}
                 {active === "Date & Time" && <span>Next Cart Items</span>}
                 {active === "Cart Items" && <span>Next Student Info</span>}
+                {active === "Cart Items" && <span>Next Student Info</span>}
+                {active === "Cart Items" && <span>Next Student Info</span>}
                 {active === "Student Info" && <span>Next Summary</span>}
                 {active === "Summary" && <span>Next Book Classroom</span>}
                 <ArrowLongRight className="h-[40px] w-[40px]" />
