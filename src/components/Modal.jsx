@@ -1,35 +1,41 @@
-import React from "react";
+import { useRef, useEffect } from "react";
+import PropTypes from "prop-types";
 
-const Modal = ({ isOpen, setIsOpen }) => {
-  const closeModal = () => {
-    setIsOpen(false);
-  };
+const Modal = ({ children, onClose, css }) => {
+  const modalRef = useRef(null);
 
-  const handleOverlayClick = (e) => {
-    // Close the modal if the click is on the overlay (outside the modal)
-    if (e.target.classList.contains("overlay")) {
-      closeModal();
-    }
-  };
+  useEffect(() => {
+    // Function to close the modal when clicking outside
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        onClose();
+      }
+    };
+
+    // Attach the event listener to the document
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Clean up the event listener when the component is unmounted
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [onClose]);
 
   return (
-    <div
-      className={`fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center ${
-        isOpen ? "visible" : "invisible"
-      } overlay`}
-      onClick={handleOverlayClick}
-    >
-      <div className="bg-white p-8 max-w-md rounded shadow-md">
-        <p>This is the modal content.</p>
-        <button
-          className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline-blue"
-          onClick={closeModal}
-        >
-          Close
-        </button>
+    <div className={css}>
+      <div ref={modalRef} className="rounded shadow-md">
+        {children}
       </div>
     </div>
   );
+};
+
+//fixed inset-0 flex justify-center items-center bg-opacity-50 bg-gray-900
+
+Modal.propTypes = {
+  children: PropTypes.object.isRequired,
+  onClose: PropTypes.func.isRequired,
+  css: PropTypes.string.isRequired,
 };
 
 export default Modal;

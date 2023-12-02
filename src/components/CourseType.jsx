@@ -4,9 +4,8 @@ import { useState } from "react";
 import SubjectCard from "./SubjectCard";
 import { Data } from "@/assets/SubData";
 
-export default function CourseType({ setIsOpen }) {
+export default function CourseType({ setIsOpen, check, setCheck }) {
   const [mark, setMark] = useState("all");
-  const [check, setCheck] = useState();
 
   const course = ["all", "sat", "mcat", "lsat", "gmat", "gre", "ielts"];
 

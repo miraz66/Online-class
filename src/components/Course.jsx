@@ -14,11 +14,13 @@ import clsx from "clsx";
 import { useState } from "react";
 import CourseType from "./CourseType";
 import ExtraClassModel from "./ExtraSubModel";
+import Modal from "./Modal";
 
 export default function Course() {
   const [active, setActive] = useState("Subjects");
   const [next, setNext] = useState(false);
   const [isOpen, setIsOpen] = useState();
+  const [check, setCheck] = useState();
 
   const OptionCategory = [
     {
@@ -106,6 +108,11 @@ export default function Course() {
     return clearTimeout(handleButtonClick);
   };
 
+  function onClose() {
+    setIsOpen(false);
+    setCheck(false);
+  }
+
   return (
     <>
       <div className="max-w-7xl mx-auto px-10 my-10 grid grid-cols-4">
@@ -143,7 +150,11 @@ export default function Course() {
             </div>
           )}
           <div className="p-6 shadow-sm overflow-y-scroll">
-            <CourseType setIsOpen={setIsOpen} />
+            <CourseType
+              check={check}
+              setCheck={setCheck}
+              setIsOpen={setIsOpen}
+            />
           </div>
           <div className="border-t p-5 pr-10 flex justify-end">
             <button
@@ -156,11 +167,17 @@ export default function Course() {
           </div>
           <div
             className={clsx(
-              "ease-in-out duration-300",
+              "ease-in-out duration-300 overlay",
               isOpen ? "-translate-y-[29.6rem]" : "translate-y-0"
             )}
           >
-            <ExtraClassModel isOpen={isOpen} setIsOpen={setIsOpen} />
+            <Modal onClose={onClose} css="absolute w-full lg:top-0 right-0">
+              <ExtraClassModel
+                setActive={setActive}
+                isOpen={isOpen}
+                onClose={onClose}
+              />
+            </Modal>
           </div>
         </div>
       </div>
