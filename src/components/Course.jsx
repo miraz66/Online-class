@@ -34,6 +34,7 @@ export default function Course() {
           fill={"Subjects" === active ? "#ffffff" : "#171717"}
         />
       ),
+      error: "Please select any service to book the appointment.",
     },
     {
       name: "Teachers",
@@ -46,6 +47,7 @@ export default function Course() {
           fill={"Teachers" === active ? "#ffffff" : "#171717"}
         />
       ),
+      error: "Please select staff member",
     },
     {
       name: "Date & Time",
@@ -58,6 +60,7 @@ export default function Course() {
           fill={"Date & Time" === active ? "#ffffff" : "#171717"}
         />
       ),
+      error: "Please select a time slot to proceed with the booking.",
     },
     {
       name: "Cart Items",
@@ -142,42 +145,64 @@ export default function Course() {
             ))}
           </div>
         </div>
-        <div className="h-[55rem] overflow-hidden col-span-3 border-2 rounded-lg">
+        <div className="col-span-3 border-2 rounded-lg">
           {next && (
-            <div className="mx-5 my-3 px-5 flex gap-2 py-2 relative font-medium text-red-500 shadow-xl bg-neutral-100 before:absolute before:h-full before:top-0 before:left-0 before:w-1 before:bg-red-500">
+            <div className="mx-5 my-3 px-5 flex gap-2 py-2 font-medium text-red-500 shadow-xl bg-neutral-100 before:absolute before:h-full before:top-0 before:left-0 before:w-1 before:bg-red-500">
               <ExclamationMark className="w-5 h-5" fill="#ef4444" />
               <span>Please select any service to book the appointment.</span>
             </div>
           )}
-          <div className="p-6 shadow-sm overflow-y-scroll">
-            <CourseType
-              check={check}
-              setCheck={setCheck}
-              setIsOpen={setIsOpen}
-            />
-          </div>
-          <div className="border-t p-5 pr-10 flex justify-end">
-            <button
-              onClick={handleButtonClick}
-              className="px-6 flex items-center gap-2 py-2 bg-secondary hover:bg-muted ease-in-out duration-200 text-white text-xl tracking-tight rounded-md"
-            >
-              <span>Next Teachers </span>
-              <ArrowLongRight className="h-[40px] w-[40px]" />
-            </button>
-          </div>
-          <div
-            className={clsx(
-              "ease-in-out duration-300 overlay",
-              isOpen ? "-translate-y-[29.6rem]" : "translate-y-0"
+          <div className="h-[55rem] overflow-hidden">
+            <div className="p-6 shadow-sm overflow-y-auto">
+              {active === "Subjects" && (
+                <CourseType
+                  check={check}
+                  setCheck={setCheck}
+                  setIsOpen={setIsOpen}
+                />
+              )}
+              {active === "Teachers" && (
+                <div className="h-[45.5rem]">Teachers</div>
+              )}
+              {active === "Date & Time" && <div className="">Date & Time</div>}
+              {active === "Cart Items" && <div className="">Cart Items</div>}
+              {active === "Student Info" && (
+                <div className="">Student Info</div>
+              )}
+              {active === "Summary" && <div className="">Summary</div>}
+            </div>
+            <div className="border-t p-5 pr-10 flex justify-end">
+              <button>Go Back</button>
+              <button
+                onClick={handleButtonClick}
+                className="px-6 flex items-center gap-2 py-2 bg-secondary hover:bg-muted ease-in-out duration-200 text-white text-xl tracking-tight rounded-md"
+              >
+                {active === "Subjects" && <span>Next Teachers</span>}
+                {active === "Teachers" && <span>Next Date & Time</span>}
+                {active === "Date & Time" && <span>Next Cart Items</span>}
+                {active === "Cart Items" && <span>Next Student Info</span>}
+                {active === "Student Info" && <span>Next Summary</span>}
+                {active === "Summary" && <span>Next Book Classroom</span>}
+                <ArrowLongRight className="h-[40px] w-[40px]" />
+              </button>
+            </div>
+
+            {active === "Subjects" && (
+              <div
+                className={clsx(
+                  "ease-in-out duration-300 overlay",
+                  isOpen ? "-translate-y-[29rem]" : "translate-y-0"
+                )}
+              >
+                <Modal onClose={onClose} css="absolute w-full lg:top-0 right-0">
+                  <ExtraClassModel
+                    setActive={setActive}
+                    isOpen={isOpen}
+                    onClose={onClose}
+                  />
+                </Modal>
+              </div>
             )}
-          >
-            <Modal onClose={onClose} css="absolute w-full lg:top-0 right-0">
-              <ExtraClassModel
-                setActive={setActive}
-                isOpen={isOpen}
-                onClose={onClose}
-              />
-            </Modal>
           </div>
         </div>
       </div>
