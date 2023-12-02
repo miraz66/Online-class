@@ -179,6 +179,8 @@ export default function Course() {
               >
                 {active === "Subjects" && <span>Next Teachers</span>}
                 {active === "Teachers" && <span>Next Date & Time</span>}
+                {active === "Teachers" && <span>Next Date & Time</span>}
+                {active === "Teachers" && <span>Next Date & Time</span>}
                 {active === "Date & Time" && <span>Next Cart Items</span>}
                 {active === "Cart Items" && <span>Next Student Info</span>}
                 {active === "Student Info" && <span>Next Summary</span>}
