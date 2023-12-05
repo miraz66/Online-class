@@ -7,7 +7,6 @@ import {
   CardIcon,
   TeachersIcon,
   SummaryIcon,
-  ArrowLongRight,
   ExclamationMark,
 } from "@/assets/Svg";
 import clsx from "clsx";
@@ -15,6 +14,10 @@ import { useState } from "react";
 import CourseType from "./CourseType";
 import ExtraClassModel from "./ExtraSubModel";
 import Modal from "./Modal";
+import {
+  ArrowLongLeftIcon,
+  ArrowLongRightIcon,
+} from "@heroicons/react/24/outline";
 
 export default function Course() {
   const [active, setActive] = useState("Subjects");
@@ -146,12 +149,19 @@ export default function Course() {
           </div>
         </div>
         <div className="col-span-3 border-2 rounded-lg">
-          {next && (
-            <div className="mx-5 my-3 px-5 flex gap-2 py-2 font-medium text-red-500 shadow-xl bg-neutral-100 before:absolute before:h-full before:top-0 before:left-0 before:w-1 before:bg-red-500">
-              <ExclamationMark className="w-5 h-5" fill="#ef4444" />
-              <span>Please select any service to book the appointment.</span>
-            </div>
-          )}
+          {next &&
+            OptionCategory.map(
+              (data, index) =>
+                active === data.name && (
+                  <div
+                    key={index}
+                    className="mx-5 my-3 px-5 flex gap-2 py-2 font-medium text-red-500 shadow-xl bg-neutral-100 before:absolute before:h-full before:top-0 before:left-0 before:w-1 before:bg-red-500"
+                  >
+                    <ExclamationMark className="w-5 h-5" fill="#ef4444" />
+                    <span>{data.error}</span>
+                  </div>
+                )
+            )}
           <div className="h-[55rem] overflow-hidden">
             <div className="p-6 shadow-sm overflow-y-auto">
               {active === "Subjects" && (
@@ -171,49 +181,24 @@ export default function Course() {
               )}
               {active === "Summary" && <div className="">Summary</div>}
             </div>
-            <div className="border-t p-5 pr-10 flex justify-end">
-              <button>Go Back</button>
+            <div className="border-t p-5 pr-10 flex gap-5 justify-end">
+              <button className="flex items-center text-xl group">
+                <ArrowLongLeftIcon className="text-neutral-500 w-10 h-10 group-hover:text-neutral-600 group-hover:ease-in-out group-hover:duration-200" />
+                <span className="group-hover:text-neutral-600 group-hover:ease-in-out group-hover:duration-200">
+                  Go Back
+                </span>
+              </button>
               <button
                 onClick={handleButtonClick}
                 className="px-6 flex items-center gap-2 py-2 bg-secondary hover:bg-muted ease-in-out duration-200 text-white text-xl tracking-tight rounded-md"
               >
                 {active === "Subjects" && <span>Next Teachers</span>}
                 {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
-                {active === "Teachers" && <span>Next Date & Time</span>}
                 {active === "Date & Time" && <span>Next Cart Items</span>}
-                {active === "Date & Time" && <span>Next Cart Items</span>}
-                {active === "Date & Time" && <span>Next Cart Items</span>}
-                {active === "Cart Items" && <span>Next Student Info</span>}
-                {active === "Cart Items" && <span>Next Student Info</span>}
                 {active === "Cart Items" && <span>Next Student Info</span>}
                 {active === "Student Info" && <span>Next Summary</span>}
                 {active === "Summary" && <span>Next Book Classroom</span>}
-                <ArrowLongRight className="h-[40px] w-[40px]" />
+                <ArrowLongRightIcon className="h-10 w-10" />
               </button>
             </div>
 
