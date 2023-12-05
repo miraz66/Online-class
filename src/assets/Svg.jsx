@@ -22,7 +22,7 @@ export const SubjectsIcon = ({ className, fill }) => {
   );
 };
 
-export const TeachersIcon = ({ className, fill }) => (
+export const TeachersIcon = ({ className, style, fill }) => (
   <svg
     className={className}
     xmlns="http://www.w3.org/2000/svg"
@@ -32,6 +32,7 @@ export const TeachersIcon = ({ className, fill }) => (
       height: "2.5rem",
       padding: "6px",
       borderRadius: "6px",
+      style,
     }}
   >
     <path d="M0 0h24v24H0V0z" fill="none"></path>

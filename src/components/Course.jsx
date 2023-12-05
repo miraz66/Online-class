@@ -18,12 +18,14 @@ import {
   ArrowLongLeftIcon,
   ArrowLongRightIcon,
 } from "@heroicons/react/24/outline";
+import Teachers from "./Teachers";
 
 export default function Course() {
   const [active, setActive] = useState("Subjects");
   const [next, setNext] = useState(false);
   const [isOpen, setIsOpen] = useState();
   const [check, setCheck] = useState();
+  const [activeTeacher, setActiveTeacher] = useState();
 
   const OptionCategory = [
     {
@@ -163,7 +165,7 @@ export default function Course() {
                 )
             )}
           <div className="h-[55rem] overflow-hidden">
-            <div className="p-6 shadow-sm overflow-y-auto">
+            <div className="shadow-sm overflow-y-auto">
               {active === "Subjects" && (
                 <CourseType
                   check={check}
@@ -172,7 +174,12 @@ export default function Course() {
                 />
               )}
               {active === "Teachers" && (
-                <div className="h-[45.5rem]">Teachers</div>
+                <div className="h-[45.5rem] p-6 overflow-y-auto">
+                  <Teachers
+                    activeTeacher={activeTeacher}
+                    setActiveTeacher={setActiveTeacher}
+                  />
+                </div>
               )}
               {active === "Date & Time" && <div className="">Date & Time</div>}
               {active === "Cart Items" && <div className="">Cart Items</div>}

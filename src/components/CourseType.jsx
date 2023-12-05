@@ -11,7 +11,7 @@ export default function CourseType({ setIsOpen, check, setCheck }) {
 
   return (
     <>
-      <div className="h-[46rem] relative">
+      <div className="h-[46rem] p-6 relative">
         <div>
           <h6 className="text-neutral-900 font-semibold text-xl relative after:absolute after:bg-secondary after:h-[2px] after:w-32 after:-bottom-[6px] after:left-0">
             <span>Course Type</span>
