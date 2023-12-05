@@ -178,6 +178,7 @@ export default function Course() {
                   <Teachers
                     activeTeacher={activeTeacher}
                     setActiveTeacher={setActiveTeacher}
+                    setActive={setActive}
                   />
                 </div>
               )}

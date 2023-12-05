@@ -1,18 +1,28 @@
 import Image from "next/image";
 import Corbero from "@/assets/TeachersImages/1683792129_ursuka-corbero.webp";
 import { CheckIcon } from "@heroicons/react/24/solid";
+import clsx from "clsx";
 
 export default function TeachersCard({
   id,
   activeTeacher,
   setActiveTeacher,
+  setActive,
   name,
   photo,
 }) {
   return (
     <div
-      onClick={() => setActiveTeacher(id)}
-      className="h-44 cursor-pointer text-neutral-500 relative shadow-md border flex flex-col justify-center items-center border-neutral-300 rounded-xl"
+      onClick={() => {
+        setActiveTeacher(id);
+        setActive("Date & Time");
+      }}
+      className={clsx(
+        "h-44 cursor-pointer text-neutral-500 relative flex flex-col justify-center items-center rounded-xl",
+        id === activeTeacher
+          ? "border border-lime-500 shadow-md"
+          : "border-neutral-300 shadow-md border"
+      )}
     >
       <Image
         className="rounded-xl"
