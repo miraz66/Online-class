@@ -1,25 +1,50 @@
-import React, { useState } from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import { useState } from "react";
+import { format, isSunday, isSaturday, isToday, isPast } from "date-fns";
 
-const DateTimePicker = () => {
-  const [selectedDate, setSelectedDate] = useState(new Date());
+import { DayPicker } from "react-day-picker";
+import "react-day-picker/dist/style.css";
 
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
+export default function DatePicker() {
+  const [selected, setSelected] = useState();
+
+  const CurrentDate = new Date(); //current date selected
+
+  const isDisabled = (date) => {
+    return (
+      (isSunday(date) || isSaturday(date) || isPast(date)) && !isToday(date) // disabled holiday or today before all days.
+    );
   };
 
-  return (
-    <DatePicker
-      selected={selectedDate}
-      onChange={handleDateChange}
-      showTimeSelect
-      timeFormat="HH:mm"
-      timeIntervals={15}
-      timeCaption="Time"
-      dateFormat="MMMM d, yyyy h:mm aa"
-    />
-  );
-};
+  let footer = <p>Please pick a day.</p>;
+  if (selected) {
+    footer = <p>You picked {format(selected, "PP")}.</p>;
+  }
 
-export default DateTimePicker;
+  const css = `
+  .my-today { 
+    font-weight: bold;
+    font-size: 140%; 
+    color: red;
+  }
+  `;
+
+  return (
+    <>
+      <style>{css}</style>
+      <DayPicker
+        mode="single"
+        selected={selected}
+        onSelect={setSelected}
+        footer={footer}
+        disabled={isDisabled}
+        fromYear={CurrentDate.getFullYear()}
+        toYear={CurrentDate.getFullYear() + 1}
+        fromDate={CurrentDate.getDate()}
+        modifiersClassNames={{
+          today: "my-today",
+        }}
+        showOutsideDays
+      />
+    </>
+  );
+}

@@ -1,11 +1,15 @@
 "use client";
 
-import DateTimePicker from "./DatePicker";
+import ButtonLocation from "./ButtonLocation";
+import DatePicker from "./DatePicker";
+import DatePickerCopy from "./DatePickerCopy";
 
 const App = () => {
   return (
     <>
-      <DateTimePicker />
+      <DatePickerCopy />
+      <DatePicker />
+      <ButtonLocation />
     </>
   );
 };
