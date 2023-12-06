@@ -12,6 +12,8 @@ const App = () => {
       <ButtonLocation />
 
       <div className=""></div>
+      <div className=""></div>
+      <div className=""></div>
     </>
   );
 };
