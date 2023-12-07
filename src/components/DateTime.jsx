@@ -35,6 +35,8 @@ export default function DateTime() {
       <div className="">Date&Time</div>
       <div className="">Date&Time</div>
       <div className="">Date&Time</div>
+      <div className="">Date&Time</div>
+      <div className="">Date&Time</div>
     </div>
   );
 }
