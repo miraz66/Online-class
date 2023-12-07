@@ -1,5 +1,9 @@
 import React from "react";
 
 export default function DateTime() {
-  return <div>Date&Time</div>;
+  return (
+    <div>
+      <div className="">Date&Time</div>
+    </div>
+  );
 }

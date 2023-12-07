@@ -9,7 +9,6 @@ const App = () => {
     <>
       <DatePickerCopy />
       <DatePicker />
-      <ButtonLocation />
     </>
   );
 };

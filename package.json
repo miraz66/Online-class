@@ -21,6 +21,7 @@
     "react-day-picker": "^8.9.1",
     "react-dom": "^18",
     "react-modern-calendar-datepicker": "^3.1.6",
+    "react-native-calendar-picker": "^7.1.4",
     "v-calendar": "^2.4.2"
   },
   "devDependencies": {
