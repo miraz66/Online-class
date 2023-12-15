@@ -7,7 +7,7 @@ export default function DateTime() {
       <h5 className="font-semibold text-2xl relative after:absolute after:bg-secondary after:h-[2px] after:w-40 after:-bottom-[6px] after:left-0">
         Date & Time
       </h5>
-      <div className="mt-10 h-[35rem] bg-red-50 grid grid-cols-2">
+      <div className="mt-10 h-[35rem] grid grid-cols-2">
         <div className="h-full">
           <DateTimeSection />
         </div>
