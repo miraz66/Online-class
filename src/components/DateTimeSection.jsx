@@ -96,7 +96,7 @@ export default function DateTimeSection() {
               className="-my-1.5 -mr-1.5 ml-2 p-1.5 text-gray-400 hover:text-gray-500"
             >
               <span className="sr-only">Next month</span>
-              <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
+              <ChevronRightIcon className="h-8 w-8" aria-hidden="true" />
             </button>
           </div>
         </div>
