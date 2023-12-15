@@ -86,7 +86,7 @@ export default function DateTimeSection() {
               <ChevronLeftIcon className="h-8 w-8" />
             </button>
           }
-          <h2 className="font-semibold text-gray-900">
+          <h2 className="font-semibold text-2xl text-gray-700">
             {format(firstDayCurrentMonth, "MMMM yyyy")}
           </h2>
           <div className="">
@@ -109,7 +109,7 @@ export default function DateTimeSection() {
           <div>Fri</div>
           <div>Sat</div>
         </div>
-        <div className="grid grid-cols-7 border grid-rows-6 text-sm">
+        <div className="grid grid-cols-7 border auto-rows-auto text-sm">
           {days.map((day, dayIdx) => (
             <div
               key={day.toString()}
