@@ -73,14 +73,14 @@ export default function DateTimeSection() {
   }
 
   return (
-    <div className="">
+    <div className="border">
       <div className="md:grid">
-        <div className="flex items-center justify-between">
+        <div className="py-3 flex items-center justify-between">
           {
             <button
               type="button"
               onClick={previousMonth}
-              className="-my-1.5 p-1.5 text-gray-400 hover:text-gray-500"
+              className="-my-1.5 pl-5 text-gray-400 hover:text-gray-500"
             >
               <span className="sr-only">Previous month</span>
               <ChevronLeftIcon className="h-8 w-8" />
@@ -89,18 +89,16 @@ export default function DateTimeSection() {
           <h2 className="font-semibold text-2xl text-gray-700">
             {format(firstDayCurrentMonth, "MMMM yyyy")}
           </h2>
-          <div className="">
-            <button
-              onClick={nextMonth}
-              type="button"
-              className="-my-1.5 -mr-1.5 ml-2 p-1.5 text-gray-400 hover:text-gray-500"
-            >
-              <span className="sr-only">Next month</span>
-              <ChevronRightIcon className="h-8 w-8" aria-hidden="true" />
-            </button>
-          </div>
+          <button
+            onClick={nextMonth}
+            type="button"
+            className="pr-5 text-gray-400 hover:text-gray-500"
+          >
+            <span className="sr-only">Next month</span>
+            <ChevronRightIcon className="h-8 w-8" aria-hidden="true" />
+          </button>
         </div>
-        <div className="mt-10 py-3 border grid grid-cols-7 text-center text-lg leading-6 text-gray-700">
+        <div className="py-3 border-t grid grid-cols-7 text-center text-lg leading-6 text-gray-700">
           <div>Sun</div>
           <div>Mon</div>
           <div>Tue</div>
