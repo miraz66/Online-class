@@ -83,7 +83,7 @@ export default function DateTimeSection() {
               className="-my-1.5 p-1.5 text-gray-400 hover:text-gray-500"
             >
               <span className="sr-only">Previous month</span>
-              <ChevronLeftIcon className="h-5 w-5" />
+              <ChevronLeftIcon className="h-8 w-8" />
             </button>
           }
           <h2 className="font-semibold text-gray-900">
