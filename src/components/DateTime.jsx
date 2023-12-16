@@ -20,6 +20,8 @@ export default function DateTime() {
           <div className="text-center">
             <p className="font-semibold text-lg pb-2">Service Duration</p>
             <p>Please select appropriate timeslot</p>
+            <p>Please select appropriate timeslot</p>
+            <p>Please select appropriate timeslot</p>
           </div>
           <div className="w-72">
             <Selector />
