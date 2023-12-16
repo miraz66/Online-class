@@ -44,6 +44,8 @@ export default function DateTime() {
             <p>Please select appropriate timeslot</p>
             <p>Please select appropriate timeslot</p>
             <p>Please select appropriate timeslot</p>
+            <p>Please select appropriate timeslot</p>
+            <p>Please select appropriate timeslot</p>
           </div>
           <div className="w-72">
             <Selector />
