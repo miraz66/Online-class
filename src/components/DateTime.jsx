@@ -18,7 +18,7 @@ export default function DateTime() {
             <ClockIcon className="w-10 h-10 text-lime-500 absolute bottom-0 left-[53px]" />
           </div>
           <div className="text-center">
-            <p className="font-semibold text-lg">Service Duration</p>
+            <p className="font-semibold text-lg pb-2">Service Duration</p>
             <p>Please select appropriate timeslot</p>
           </div>
           <div className="w-72">

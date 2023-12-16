@@ -5,7 +5,7 @@ import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 const Hours = [{ time: 1 }, { time: 2 }, { time: 3 }, { time: 4 }, { time: 5 }];
 
 export default function Selector() {
-  const [selected, setSelected] = useState();
+  const [selected, setSelected] = useState(null);
 
   console.log(selected);
 
