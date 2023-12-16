@@ -143,7 +143,7 @@ export default function DateTimeSection() {
                     "font-semibold",
                   isDisabledDay(day) &&
                     "pointer-events-none bg-neutral-50 text-gray-400", // Disable pointer events for disabled days
-                  "mx-auto flex h-full w-full items-center justify-center border py-5"
+                  "mx-auto flex h-full w-full items-center justify-center border py-7"
                 )}
               >
                 <time dateTime={format(day, "yyyy-MM-dd")}>

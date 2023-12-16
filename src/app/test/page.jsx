@@ -1,13 +1,11 @@
 "use client";
 
-import DatePicker from "./DatePicker";
-import DatePickerCopy from "./DatePickerCopy";
+import Selector from "../../components/Selector";
 
 const App = () => {
   return (
-    <main>
-      <DatePickerCopy />
-      <DatePicker />
+    <main className="bg-gray-900 font-Poppins flex  h-screen items-center justify-center">
+      <Selector />
     </main>
   );
 };
