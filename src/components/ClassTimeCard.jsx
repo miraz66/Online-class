@@ -20,27 +20,6 @@ export default function ClassTimeCard({
     >
       <time className="font-medium text-neutral-800">{time}</time>
       <p className="text-sm">15 Seats left</p>
-      <p className="text-sm">15 Seats left</p>
-      <p className="text-sm">15 Seats left</p>
-      <p className="text-sm">15 Seats left</p>
-      <p className="text-sm">15 Seats left</p>
-      <p className="text-sm">15 Seats left</p>
-      <p className="text-sm">15 Seats left</p>
-      <p className="text-sm">15 Seats left</p>
-      <p className="text-sm">15 Seats left</p>
-      <p className="text-sm">15 Seats left</p>
-      <p className="text-sm">15 Seats left</p>
-      <p className="text-sm">15 Seats left</p>
-      <p className="text-sm">15 Seats left</p>
-      <p className="text-sm">15 Seats left</p>
-      <p className="text-sm">15 Seats left</p>
-      <p className="text-sm">15 Seats left</p>
-      <p className="text-sm">15 Seats left</p>
-      <p className="text-sm">15 Seats left</p>
-      <p className="text-sm">15 Seats left</p>
-      <p className="text-sm">15 Seats left</p>
-      <p className="text-sm">15 Seats left</p>
-      <p className="text-sm">15 Seats left</p>
     </div>
   );
 }
