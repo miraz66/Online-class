@@ -185,7 +185,7 @@ export default function Course() {
               )}
               {active === "Date & Time" && (
                 <div className="h-[45.5rem] p-6 overflow-y-auto">
-                  <DateTime />
+                  <DateTime setActive={setActive} />
                 </div>
               )}
               {active === "Cart Items" && <div className="">Cart Items</div>}

@@ -32,16 +32,17 @@ let colStartClasses = [
 function isDisabledDay(day, selectedDay) {
   const isBeforeToday = day < startOfToday();
   const isWeekend = getDay(day) === 0 || getDay(day) === 6; // Sun or Sat
-  const isDayBeforeSelected = isEqual(day, add(selectedDay, { days: -1 }));
+  const isDayBeforeSelected = isEqual(day, add(selectedDay, { days: 1 }));
 
   return isBeforeToday || isWeekend || isDayBeforeSelected;
 }
 
-export default function DateTimeSection() {
+export default function DateSection({ selectedDay, setSelectedDay }) {
   let today = startOfToday();
-  let [selectedDay, setSelectedDay] = useState(today);
   let [currentMonth, setCurrentMonth] = useState(format(today, "MMM-yyyy"));
   let firstDayCurrentMonth = parse(currentMonth, "MMM-yyyy", new Date());
+
+  console.log(selectedDay);
 
   let days = eachDayOfInterval({
     start: firstDayCurrentMonth,
@@ -73,7 +74,7 @@ export default function DateTimeSection() {
   }
 
   return (
-    <div className="border">
+    <div className="border rounded-lg">
       <div className="md:grid">
         <div className="py-3 flex items-center justify-between">
           {
@@ -122,11 +123,11 @@ export default function DateTimeSection() {
                     setSelectedDay(day);
                   } else {
                     // Day is disabled, unselect it or handle as needed
-                    setSelectedDay(null);
+                    setSelectedDay(selectedDay);
                   }
                 }}
                 className={classNames(
-                  isEqual(day, selectedDay) && "text-white",
+                  isEqual(day, selectedDay) && "text-red-500",
                   !isEqual(day, selectedDay) && isToday(day) && "text-red-500",
                   !isEqual(day, selectedDay) &&
                     !isToday(day) &&
@@ -136,9 +137,11 @@ export default function DateTimeSection() {
                     !isToday(day) &&
                     !isSameMonth(day, firstDayCurrentMonth) &&
                     "text-gray-400",
-                  isEqual(day, selectedDay) && isToday(day) && "bg-red-500",
-                  isEqual(day, selectedDay) && !isToday(day) && "bg-gray-900",
-                  !isEqual(day, selectedDay) && "hover:bg-gray-200",
+                  isEqual(day, selectedDay) && isToday(day) && "text-red-500",
+                  isEqual(day, selectedDay) &&
+                    !isToday(day) &&
+                    "bg-lime-500 text-white",
+                  !isEqual(day, selectedDay) && "hover:bg-lime-200",
                   (isEqual(day, selectedDay) || isToday(day)) &&
                     "font-semibold",
                   isDisabledDay(day) &&
