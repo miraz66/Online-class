@@ -25,6 +25,8 @@ export default function ClassTimeCard({
       <p className="text-sm">15 Seats left</p>
       <p className="text-sm">15 Seats left</p>
       <p className="text-sm">15 Seats left</p>
+      <p className="text-sm">15 Seats left</p>
+      <p className="text-sm">15 Seats left</p>
     </div>
   );
 }
