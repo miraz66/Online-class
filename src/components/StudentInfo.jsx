@@ -20,6 +20,8 @@ export default function StudentInfo() {
       <div className="">StudentInfo</div>
       <div className="">StudentInfo</div>
       <div className="">StudentInfo</div>
+      <div className="">StudentInfo</div>
+      <div className="">StudentInfo</div>
     </div>
   );
 }
