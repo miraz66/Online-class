@@ -20,6 +20,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Teachers from "./Teachers";
 import DateTime from "./DateTime";
+import StudentInfo from "./StudentInfo";
 
 export default function Course() {
   const [active, setActive] = useState("Subjects");
@@ -190,7 +191,9 @@ export default function Course() {
               )}
               {active === "Cart Items" && <div className="">Cart Items</div>}
               {active === "Student Info" && (
-                <div className="">Student Info</div>
+                <div className="h-[45.5rem] p-6 overflow-y-auto">
+                  <StudentInfo />
+                </div>
               )}
               {active === "Summary" && <div className="">Summary</div>}
             </div>
