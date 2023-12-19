@@ -193,7 +193,7 @@ export default function Course() {
               {active === "Cart Items" && <div className="">Cart Items</div>}
               {active === "Student Info" && (
                 <div className="h-[45.5rem] p-6 overflow-y-auto">
-                  <StudentInfo />
+                  <StudentInfo setActive={setActive} setNext={setActive} />
                 </div>
               )}
               {active === "Summary" && <div className="">Summary</div>}
