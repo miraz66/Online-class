@@ -29,6 +29,12 @@ export default function Course() {
   const [check, setCheck] = useState();
   const [activeTeacher, setActiveTeacher] = useState();
 
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState();
+  const [notes, setNotes] = useState("");
+
   const OptionCategory = [
     {
       name: "Subjects",
@@ -193,7 +199,11 @@ export default function Course() {
               {active === "Cart Items" && <div className="">Cart Items</div>}
               {active === "Student Info" && (
                 <div className="h-[45.5rem] p-6 overflow-y-auto">
-                  <StudentInfo setActive={setActive} setNext={setActive} />
+                  <StudentInfo
+                    setActive={setActive}
+                    setNext={setNext}
+                    next={next}
+                  />
                 </div>
               )}
               {active === "Summary" && <div className="">Summary</div>}
