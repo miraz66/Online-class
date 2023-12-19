@@ -52,6 +52,8 @@ export default function Input({
       {!value && "hello"}
       {!value && "hello"}
       {!value && "hello"}
+      {!value && "hello"}
+      {!value && "hello"}
     </div>
   );
 }
