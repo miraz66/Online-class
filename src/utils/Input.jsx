@@ -25,6 +25,7 @@ export default function Input({
         onChange={(e) => initialValue(e.target.value)}
       />
       {!value && "hello"}
+      {!value && "hello"}
     </div>
   );
 }
