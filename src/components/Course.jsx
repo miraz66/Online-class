@@ -156,6 +156,7 @@ export default function Course() {
           {next &&
             OptionCategory.map(
               (data, index) =>
+                data.error &&
                 active === data.name && (
                   <div
                     key={index}

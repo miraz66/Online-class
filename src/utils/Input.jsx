@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 export default function Input({
   type,
   placeholder,
@@ -26,6 +24,7 @@ export default function Input({
         id={id}
         onChange={(e) => initialValue(e.target.value)}
       />
+      {!value && "hello"}
     </div>
   );
 }
