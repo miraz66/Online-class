@@ -9,6 +9,8 @@ export default function Input({
   inputClass,
   value,
   asterisk,
+  name,
+  inputError,
 }) {
   return (
     <div className={className}>
@@ -18,48 +20,14 @@ export default function Input({
       </label>
       <input
         className={inputClass}
+        name={name}
         type={type}
         placeholder={placeholder}
         value={value}
         id={id}
-        onChange={(e) => initialValue(e.target.value)}
+        onChange={initialValue}
       />
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
-      {!value && "hello"}
+      {value === inputError && "hello"}
     </div>
   );
 }

@@ -28,12 +28,18 @@ export default function Course() {
   const [isOpen, setIsOpen] = useState();
   const [check, setCheck] = useState();
   const [activeTeacher, setActiveTeacher] = useState();
+  const [inputError, setInputError] = useState();
 
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState();
-  const [notes, setNotes] = useState("");
+  // State to manage form data
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    message: "",
+  });
+
+  console.log(inputError);
+  console.log(formData);
 
   const OptionCategory = [
     {
@@ -117,9 +123,21 @@ export default function Course() {
   const handleButtonClick = () => {
     setNext(true);
 
+    if (formData.firstname === "") {
+      setInputError("firstname");
+    } else if (formData.email === "") {
+      setInputError("email");
+    } else if (formData.lastname === "") {
+      setInputError("lastname");
+    } else if (formData.phone === "") {
+      setInputError("phone");
+    } else {
+      setActive("Summary");
+    }
     setTimeout(() => {
       setNext(false);
     }, 5000);
+    setInputError("");
 
     return clearTimeout(handleButtonClick);
   };
@@ -200,9 +218,9 @@ export default function Course() {
               {active === "Student Info" && (
                 <div className="h-[45.5rem] p-6 overflow-y-auto">
                   <StudentInfo
-                    setActive={setActive}
-                    setNext={setNext}
-                    next={next}
+                    formData={formData}
+                    setFormData={setFormData}
+                    inputError={inputError}
                   />
                 </div>
               )}

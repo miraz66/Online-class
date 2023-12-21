@@ -1,11 +1,12 @@
 "use client";
-import Slider from "./Slider";
+
+import TestForm from "./TestForm";
 
 const App = () => {
   return (
     <main>
       <div className="w-full">
-        <Slider />
+        <TestForm />
       </div>
     </main>
   );
