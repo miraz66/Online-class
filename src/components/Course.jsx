@@ -38,9 +38,6 @@ export default function Course() {
     message: "",
   });
 
-  console.log(inputError);
-  console.log(formData);
-
   const OptionCategory = [
     {
       name: "Subjects",
@@ -129,8 +126,6 @@ export default function Course() {
       setInputError("email");
     } else if (formData.lastname === "") {
       setInputError("lastname");
-    } else if (formData.phone === "") {
-      setInputError("phone");
     } else {
       setActive("Summary");
     }

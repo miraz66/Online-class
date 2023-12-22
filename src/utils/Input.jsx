@@ -1,3 +1,5 @@
+import { ExclamationCircleIcon } from "@heroicons/react/24/outline";
+
 export default function Input({
   type,
   placeholder,
@@ -27,7 +29,14 @@ export default function Input({
         id={id}
         onChange={initialValue}
       />
-      {value === inputError && "hello"}
+      {value === inputError && (
+        <div className="flex gap-1">
+          <ExclamationCircleIcon className="h-6 w-6 text-red-500" />
+          <p className="text-red-500 tracking-tighter text-base">
+            please input your {name}
+          </p>
+        </div>
+      )}
     </div>
   );
 }
