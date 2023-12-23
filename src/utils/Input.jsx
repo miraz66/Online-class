@@ -31,7 +31,7 @@ export default function Input({
       />
       {value === inputError && (
         <div className="flex gap-1">
-          <ExclamationCircleIcon className="h-6 w-6 text-red-500" />
+          <ExclamationCircleIcon className="h-5 w-5 text-red-500" />
           <p className="text-red-500 tracking-tighter text-base">
             please input your {name}
           </p>

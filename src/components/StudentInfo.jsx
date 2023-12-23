@@ -1,4 +1,5 @@
 import Input from "@/utils/Input";
+import RadioButton from "@/utils/RadioButton";
 import { ExclamationCircleIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import PhoneInput from "react-phone-input-2";
@@ -116,34 +117,30 @@ export default function StudentInfo({ formData, setFormData, inputError }) {
 
         <div className="">
           <h6>How Would you like to attend your Class ?</h6>
-
-          <div className="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
-            <input
-              className="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100"
-              type="radio"
-              name="flexRadioDefault"
-              id="radioDefault01"
+          <div>
+            <div className="flex gap-20 pb-3 mt-5">
+              <RadioButton
+                label="Live Interactive Online Class"
+                id="radioDefault01"
+              />
+              <RadioButton
+                label="Student Should travel to my home"
+                id="radioDefault02"
+              />
+            </div>
+            <RadioButton
+              label="I can travel to the student home"
+              id="radioDefault03"
             />
-            <label
-              className="mt-px inline-block pl-[0.15rem] hover:cursor-pointer"
-              htmlFor="radioDefault01"
-            >
-              Default radio
-            </label>
           </div>
-          <div className="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
-            <input
-              className="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100"
-              type="radio"
-              name="flexRadioDefault"
-              id="radioDefault02"
-              defaultChecked
-            />
-            <label
-              className="mt-px inline-block pl-[0.15rem] hover:cursor-pointer"
-              htmlFor="radioDefault02"
-            >
-              Default checked radio
+          <div className="mt-6">
+            <label className="checkbox style-c border-neutral-300">
+              <input type="checkbox" />
+              <div className="checkbox__checkmark"></div>
+              <div className="">
+                I agree to the website <a href="">terms & conditions</a> and{" "}
+                <a href="">terms & conditions</a>
+              </div>
             </label>
           </div>
         </div>

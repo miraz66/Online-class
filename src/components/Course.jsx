@@ -21,6 +21,7 @@ import {
 import Teachers from "./Teachers";
 import DateTime from "./DateTime";
 import StudentInfo from "./StudentInfo";
+import Summary from "./Summary";
 
 export default function Course() {
   const [active, setActive] = useState("Subjects");
@@ -219,7 +220,11 @@ export default function Course() {
                   />
                 </div>
               )}
-              {active === "Summary" && <div className="">Summary</div>}
+              {active === "Summary" && (
+                <div className="h-[45.5rem] p-6 overflow-y-auto">
+                  <Summary />
+                </div>
+              )}
             </div>
             <div className="border-t p-5 pr-10 flex gap-5 justify-end">
               <button className="flex items-center text-xl group">
@@ -237,7 +242,7 @@ export default function Course() {
                 {active === "Date & Time" && <span>Next Cart Items</span>}
                 {active === "Cart Items" && <span>Next Student Info</span>}
                 {active === "Student Info" && <span>Next Summary</span>}
-                {active === "Summary" && <span>Next Book Classroom</span>}
+                {active === "Summary" && <span>Book Classroom</span>}
                 <ArrowLongRightIcon className="h-10 w-10" />
               </button>
             </div>
