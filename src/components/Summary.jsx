@@ -41,42 +41,24 @@ export default function Summary() {
         </div>
         <div className="flex items-center justify-between relative py-6 before:absolute before:w-full before:h-[2px] before:bg-neutral-200 before:bottom-0">
           <p className="pl-6">Have a coupon code ?</p>
-          <div className="h-12 border rounded border-neutral-400">
+          <div className="h-12 mr-6 border rounded border-neutral-400">
             <input
               className="h-full pl-4 outline-none"
               type="text"
               placeholder="Enter Your coupon code"
             />
             <button className="rounded bg-lime-600 text-white py-2 px-6 mr-2">
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
-              Apply Apply Apply Apply Apply Apply Apply Apply Apply Apply
+              Apply
             </button>
           </div>
         </div>
+        <div className="p-6 flex items-center justify-between">
+          <p>Total Amount Payable (Inc. Taxes)</p>
+          <p>$70.00</p>
+        </div>
+      </div>
+      <div className="">
+        <h5>Mode of payment</h5>
       </div>
     </>
   );
