@@ -48,7 +48,7 @@ export default function Summary() {
               placeholder="Enter Your coupon code"
             />
             <button className="rounded bg-lime-600 text-white py-2 px-6 mr-2">
-              Apply Apply Apply Apply
+              Apply Apply Apply Apply Apply Apply Apply Apply
             </button>
           </div>
         </div>
