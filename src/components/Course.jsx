@@ -22,6 +22,7 @@ import Teachers from "./Teachers";
 import DateTime from "./DateTime";
 import StudentInfo from "./StudentInfo";
 import Summary from "./Summary";
+import CartItems from "./CartItems";
 
 export default function Course() {
   const [active, setActive] = useState("Subjects");
@@ -120,20 +121,20 @@ export default function Course() {
   // Function to handle button click
   const handleButtonClick = () => {
     setNext(true);
+    setInputError("");
 
-    if (formData.firstname === "") {
-      setInputError("firstname");
-    } else if (formData.email === "") {
-      setInputError("email");
-    } else if (formData.lastname === "") {
-      setInputError("lastname");
-    } else {
-      setActive("Summary");
-    }
     setTimeout(() => {
       setNext(false);
+      if (formData.firstname === "") {
+        setInputError("firstname");
+      } else if (formData.email === "") {
+        setInputError("email");
+      } else if (formData.lastname === "") {
+        setInputError("lastname");
+      } else {
+        setActive("Summary");
+      }
     }, 5000);
-    setInputError("");
 
     return clearTimeout(handleButtonClick);
   };
@@ -210,7 +211,11 @@ export default function Course() {
                   <DateTime setActive={setActive} />
                 </div>
               )}
-              {active === "Cart Items" && <div className="">Cart Items</div>}
+              {active === "Cart Items" && (
+                <div className="h-[45.5rem] p-6 overflow-y-auto">
+                  <CartItems />
+                </div>
+              )}
               {active === "Student Info" && (
                 <div className="h-[45.5rem] p-6 overflow-y-auto">
                   <StudentInfo
