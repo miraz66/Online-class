@@ -45,6 +45,7 @@ export default function SubjectsDetails() {
             <span>Teacher</span>
             <span className="font-semibold">Draper Moore</span>
             <span className="font-semibold">Draper Moore</span>
+            <span className="font-semibold">Draper Moore</span>
           </div>
         </div>
       )}
