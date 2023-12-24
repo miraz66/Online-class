@@ -222,7 +222,7 @@ export default function Course() {
               )}
               {active === "Summary" && (
                 <div className="h-[45.5rem] p-6 overflow-y-auto">
-                  <Summary />
+                  <Summary formData={formData} />
                 </div>
               )}
             </div>
