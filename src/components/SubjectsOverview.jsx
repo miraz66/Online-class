@@ -11,6 +11,7 @@ export default function SubjectsOverview() {
           Overview Subjects <br /> Overview Overview Subjects <br /> Overview
           Overview Subjects <br /> Overview Overview Subjects <br /> Overview
           Overview Subjects <br /> Overview Overview Subjects <br /> Overview
+          Overview Subjects <br /> Overview Overview Subjects <br /> Overview
         </h3>
         <p>
           The Champion School aims at offering all our students a broad and
