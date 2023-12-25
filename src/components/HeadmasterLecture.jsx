@@ -10,7 +10,9 @@ export default function HeadmasterLecture() {
           We aim at inspiring our students to dream more, learn more, do more,
           and become more in their respective journeys of life.
         </p>
-        <p>Jonathan Doe — Headmaster</p>
+        <p className="text-xl font-medium text-secondary">
+          Jonathan Doe — Headmaster
+        </p>
       </div>
     </div>
   );
