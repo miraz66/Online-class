@@ -44,28 +44,6 @@ export default function SubjectsDetails() {
           <div className="flex flex-col items-center justify-center w-full">
             <span>Teacher</span>
             <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
-            <span className="font-semibold">Draper Moore</span>
           </div>
         </div>
       )}
