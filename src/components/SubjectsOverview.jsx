@@ -1,9 +1,10 @@
 import React from "react";
 import OverviewCard from "./OverviewCard";
+import { OverviewData } from "@/assets/OverviewData/Data";
 
 export default function SubjectsOverview() {
   return (
-    <div className="max-w-7xl mx-auto px-10 py-28">
+    <div className="max-w-7xl mx-auto px-10 py-28 mt-20">
       <div className="grid grid-cols-2">
         <h3 className="text-5xl font-semibold font-serif text-neutral-700 leading-tight">
           Subjects <br /> Overview
@@ -15,11 +16,7 @@ export default function SubjectsOverview() {
         </p>
       </div>
       <div className="grid my-20 grid-cols-3 grid-rows-2 gap-8">
-        <OverviewCard />
-        <OverviewCard />
-        <OverviewCard />
-        <OverviewCard />
-        <OverviewCard />
+        {OverviewData.map(() => {})}
         <OverviewCard />
       </div>
     </div>

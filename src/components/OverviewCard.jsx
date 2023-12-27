@@ -9,7 +9,7 @@ export default function OverviewCard() {
         src={schoolTemplateCurriculumImg_1}
         alt=""
       />
-      <h5 className="text-3xl py-5 font-medium font-serif text-neutral-800">
+      <h5 className="text-4xl py-5 font-medium font-serif text-neutral-700">
         Computer Science
       </h5>
       <p className="text-neutral-600">
