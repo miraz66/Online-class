@@ -13,6 +13,7 @@ export default function SubjectsOverview() {
           The Champion School aims at offering all our students a broad and
           balanced curriculum that provides rewarding and stimulating activities
           balanced curriculum that provides rewarding and stimulating activities
+          balanced curriculum that provides rewarding and stimulating activities
           to prepare them for the best social and cultural life.
         </p>
       </div>
