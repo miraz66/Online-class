@@ -12,7 +12,8 @@ export default function SubjectsOverview() {
         <p className="text-xl text-neutral-800 relative after:absolute after:w-20 after:h-[3px] after:-top-8 after:left-0 after:bg-lime-500">
           The Champion School aims at offering all our students a broad and
           balanced curriculum that provides rewarding and stimulating activities
-          to prepare them for the best social and cultural life.
+          to prepare them for the best social and cultural life. to prepare them
+          for the best social and cultural life.
         </p>
       </div>
       <div className="grid my-20 grid-cols-3 grid-rows-2 gap-8">
